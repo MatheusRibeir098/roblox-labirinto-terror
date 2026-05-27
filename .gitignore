@@ -1,0 +1,9 @@
+# Roblox
+*.rbxlx.lock
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Kiro interno
+.kiro/
