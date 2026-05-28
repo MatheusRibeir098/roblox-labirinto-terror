@@ -5,6 +5,13 @@ local PathfindingService = game:GetService("PathfindingService")
 local Players = game:GetService("Players")
 
 local monstro = workspace:WaitForChild("Medo")
+
+-- Garantir que nenhuma parte está ancorada (fix para modelos importados)
+for _, part in ipairs(monstro:GetDescendants()) do
+    if part:IsA("BasePart") then
+        part.Anchored = false
+    end
+end
 local humanoid = monstro:WaitForChild("Humanoid")
 local rootPart = monstro:WaitForChild("HumanoidRootPart")
 
